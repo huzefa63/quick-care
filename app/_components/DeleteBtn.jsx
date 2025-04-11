@@ -1,4 +1,5 @@
 'use client';
+import { MdDelete } from "react-icons/md";
 
 import { deleteAccountAction } from "@/actions/deleteAccountAction";
 
