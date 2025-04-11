@@ -2,6 +2,7 @@
 
 import { deleteAccountAction } from "@/actions/deleteAccountAction";
 import { useRef } from "react";
+import { MdDelete } from "react-icons/md";
 
 function DeleteBtn() {
   const ref = useRef(null);
