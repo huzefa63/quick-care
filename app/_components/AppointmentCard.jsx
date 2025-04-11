@@ -51,7 +51,7 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
           <h1 className="flex gap-2">
             <span className="font-semibold">Consultation Fee: </span>{" "}
             <span className="flex items-center">
-              {appointment.fee} <MdOutlineCurrencyRupee />
+              {Number(appointment.fee) / 100} <MdOutlineCurrencyRupee />
             </span>
           </h1>
           <h1 className="flex gap-2 font-semibold">
