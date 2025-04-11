@@ -116,7 +116,13 @@ function TimeSlot({slot,doctorId,user,index}) {
                       const stripe = await stripePromise;
                       const session = await axios.post(
                         `${process.env.NEXT_PUBLIC_ROOT_URL}/appointments/checkout-session`,
-                        { appointment }
+                        {
+                          date: dateTime,
+                          doctor: doctorId,
+                          userId: user.email,
+                          status: "upcoming",
+                          fee: '300',
+                        }
                       );
                       await stripe.redirectToCheckout({sessionId:session.data.session.id});
                     }}
