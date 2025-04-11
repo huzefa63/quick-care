@@ -59,7 +59,7 @@ function ContextMenu({position,appointmentId,setIsContext}) {
   if(loading) return null;
     if(!isCancelled) return (
       <div
-        className="absolute font-bold menu h-[6rem] w-[8rem] rounded-sm bg-white z-10 shadow-sm tracking-widest"
+        className="absolute font-bold menu py-2 w-[8rem] rounded-sm bg-white z-10 shadow-sm tracking-widest"
         style={{ top: position.y, left: position.x - 140 }}
       >
         <button className="flex w-full items-center gap-2 text-rose-600 h-1/2 px-3" onClick={cancelAppointment}>
