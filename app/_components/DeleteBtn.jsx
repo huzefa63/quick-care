@@ -11,7 +11,9 @@ function DeleteBtn() {
     e.preventDefault();
     const confirmed = window.confirm('are you sure you want to delete your account ?');
     if(confirmed) ref.current.requestSubmit();
-        toast.success('account deleted successfully');
+       setTimeout(() => {
+      toast.success("account deleted successfully");
+    }, 1000);
 
   }
     return (
