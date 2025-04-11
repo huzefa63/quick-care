@@ -29,6 +29,8 @@ function ContextMenu({position,appointmentId,setIsContext}) {
   },[])
 
   async function cancelAppointment(){
+    const confirmed = window.confirm('are you sure you want to cancel appointment ?');
+    if(!confirmed) return;
     try{
       const req = await axios.post(`${process.env.NEXT_PUBLIC_ROOT_URL}/appointments/cancelAppointment`,{appointmentId}); 
       await revalidateAppointments();
