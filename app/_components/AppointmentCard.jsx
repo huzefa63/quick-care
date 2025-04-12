@@ -20,7 +20,7 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
   // const date = dayjs(appointment.date).format('MMMM D, YYYY');
   // const time = dayjs(appointment.date).format('h:mm A')
   return (
-    <div className="border- pr-6 pl-3 bg-gray-100 relative border-gray-300 min-h-[25%] rounded-2xl [box-shadow:0px_6px_12px_rgba(0,0,0,0.1),0px_-6px_12px_rgba(0,0,0,0.05)]">
+    <div className="border- pr-6 pl-3 bg-gray-100 relative border-gray-300 h-[25%] rounded-2xl [box-shadow:0px_6px_12px_rgba(0,0,0,0.1),0px_-6px_12px_rgba(0,0,0,0.05)]">
       <div className="rotate-[1deg] absolute right-2 top-3 dots">
         <HiOutlineDotsVertical
           size={18}
@@ -33,7 +33,7 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
         />
       </div>
       <div className="h-full flex">
-        <div className="relative min-h-[75%] max-h-[65%] max-w-[30%] min-w-[30%] top-1/2 -translate-y-1/2 rounded-xl overflow-hidden">
+        <div className="relative h-[65%] max-w-[30%] min-w-[30%] top-1/2 -translate-y-1/2 rounded-xl overflow-hidden">
           <Image sizes="90" src={`/${appointment.doctor.image}.jpg`} alt="nothing" fill />
         </div>
         <div className="w-full pl-4 py-3 flex flex-col justify-around">
