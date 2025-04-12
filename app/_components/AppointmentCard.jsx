@@ -37,7 +37,7 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
           <Image sizes="90" src={`/${appointment.doctor.image}.jpg`} alt="nothing" fill />
         </div>
         <div className="w-full pl-4 py-3 flex flex-col justify-around">
-          <h1 className="text-lg font-semibold tracking-wider">
+          <h1 className=" font-semibold tracking-wider">
             {appointment.doctor.name}
           </h1>
           <h1 className="flex gap-2 text-sm">
