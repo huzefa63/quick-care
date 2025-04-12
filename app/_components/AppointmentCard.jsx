@@ -33,28 +33,28 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
         />
       </div>
       <div className="h-full flex">
-        <div className="relative max-h-[65%] max-w-[30%] min-w-[30%] top-1/2 -translate-y-1/2 rounded-xl overflow-hidden">
+        <div className="relative max-h-[85%] max-w-[30%] min-w-[30%] top-1/2 -translate-y-1/2 rounded-xl overflow-hidden">
           <Image sizes="90" src={`/${appointment.doctor.image}.jpg`} alt="nothing" fill />
         </div>
         <div className="w-full pl-4 py-3 flex flex-col justify-around">
           <h1 className="text-lg font-semibold tracking-wider">
             {appointment.doctor.name}
           </h1>
-          <h1 className="flex gap-2">
+          <h1 className="flex gap-2 text-sm">
             <span className="font-semibold">Date: </span>{" "}
             {appointment.date.split("T")[0]}
           </h1>
-          <h1 className="flex gap-2">
+          <h1 className="flex gap-2 text-sm">
             <span className="font-semibold">Time: </span>{" "}
             {appointment.date.split("T")[1]}
           </h1>
-          <h1 className="flex gap-2">
+          <h1 className="flex gap-2 text-sm">
             <span className="font-semibold">Consultation Fee: </span>{" "}
             <span className="flex items-center">
               {Number(appointment.fee) / 100} <MdOutlineCurrencyRupee />
             </span>
           </h1>
-          <h1 className="flex gap-2 font-semibold">
+          <h1 className="flex gap-2 text-sm font-semibold">
             Status:
             <span
               className={` ${
