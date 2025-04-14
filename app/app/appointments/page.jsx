@@ -14,6 +14,7 @@ async function  page() {
       redirect("/login");
     }
     try{
+        console.log('req made');
          const response = await fetch(
        `${process.env.NEXT_PUBLIC_ROOT_URL}/appointments/getAppointment`,
        {
@@ -24,7 +25,9 @@ async function  page() {
        }
      );
      data = await response.json();
+        console.log('hello from try');
     }catch(err){
+        console.log('hello from catch');
         return (
       <div className="h-full flex items-center justify-center text-red-600">
         something went wrong! Please refresh the page or try again later.
