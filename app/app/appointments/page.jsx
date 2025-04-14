@@ -9,10 +9,12 @@ import { redirect } from "next/navigation";
 
 async function  page() {
     const session = await auth();
+    let data = [];
     if(!session){
       redirect("/login");
     }
-     const response = await fetch(
+    try{
+         const response = await fetch(
        `${process.env.NEXT_PUBLIC_ROOT_URL}/appointments/getAppointment`,
        {
          method: "POST",
@@ -21,8 +23,15 @@ async function  page() {
          cache: "no-store", // Ensures fresh data
        }
      );
-     const data = await response.json();
-     console.log('appo data ',data);
+     data = await response.json();
+    }catch(err){
+        return (
+      <div className="h-full flex items-center justify-center text-red-600">
+        something went wrong! Please refresh the page or try again later.
+      </div>
+    );
+    }
+    
     return (
       <div className="h-full flex flex-col items-center py-3">
         <h1 className="text-gray-800 mb-5 tracking-widest mt-5 text-2xl font-semibold text-center shadow-sm italic bg-cyan-400 px-10 py-2 rounded-bl-full rounded-tr-full">
