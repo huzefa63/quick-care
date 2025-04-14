@@ -20,7 +20,7 @@ function AppointmentCard({ setAppointmentId, appointment,setPosition,setIsContex
   // const date = dayjs(appointment.date).format('MMMM D, YYYY');
   // const time = dayjs(appointment.date).format('h:mm A')
   return (
-    <div className="border- pr-6 pl-3 bg-gray-100 relative border-gray-300 max-h-[20%] rounded-2xl [box-shadow:0px_6px_12px_rgba(0,0,0,0.1),0px_-6px_12px_rgba(0,0,0,0.05)]">
+    <div className="border- pr-6 pl-3 bg-gray-100 relative border-gray-300 max-h-[23%] rounded-2xl [box-shadow:0px_6px_12px_rgba(0,0,0,0.1),0px_-6px_12px_rgba(0,0,0,0.05)]">
       <div className="rotate-[1deg] absolute right-2 top-3 dots">
         <HiOutlineDotsVertical
           size={18}
