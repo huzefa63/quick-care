@@ -40,7 +40,9 @@ const appointments = [
     status: "Pending",
   },
 ];
-function AppointmentContainer({appointment}) {
+function AppointmentContainer({appointment,session}) {
+    console.log(session);
+  
     const [isContext, setIsContext] = useState(false);
     const [position, setPosition] = useState({ x: null, y: null });
     const [appointmentId,setAppointmentId] = useState('');
