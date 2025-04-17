@@ -2,6 +2,7 @@ import { signInAction } from "@/actions/authActions";
 import Link from "next/link";
 
 function Button({children,session}) {
+    console.log(session);
     if(session){
         return (
           <form action={signInAction}>
