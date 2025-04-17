@@ -10,6 +10,7 @@ const poppins = Poppins({
 })
 async function HomepageMain() {
   const session = await auth();
+    console.log(session);
     return (
       <main className="flex flex-col relative items-center py-3 h-full ">
         <Image
@@ -27,7 +28,7 @@ async function HomepageMain() {
           <p className="font-bold tracking-widest mt-1">in Minutes!</p>
         </div>
         <div className="absolute top-[70%]">
-          <Button>{!session ? "Login to Book Appointment" : "continue to app"}</Button>
+          <Button session={session}>{!session ? "Login to Book Appointment" : "continue to app"}</Button>
         </div>
       </main>
     );
