@@ -46,7 +46,7 @@ const token = await getToken({ req, raw: true }); // get raw JWT string
         </h1>
 
         <div className="w-[95%] h-full  ">
-          <AppointmentContainer appointment={data} session={session}/>
+          <AppointmentContainer appointment={data} session={session} token={token}/>
         </div>
       </div>
     );
