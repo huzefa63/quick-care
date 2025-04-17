@@ -9,6 +9,7 @@ import { redirect } from "next/navigation";
 
 async function  page() {
     const session = await auth();
+    console.log(session);
     let data = [];
     if(!session){
       redirect("/login");
@@ -42,7 +43,7 @@ async function  page() {
         </h1>
 
         <div className="w-[95%] h-full  ">
-          <AppointmentContainer appointment={data} />
+          <AppointmentContainer appointment={data} session={session}/>
         </div>
       </div>
     );
