@@ -3,6 +3,7 @@ import AppointmentContainer from "@/app/_components/AppointmentContainer";
 import { auth } from "@/lib/googleAuth";
 import axios from "axios";
 import { redirect } from "next/navigation";
+import { getToken } from "next-auth/jwt";
 
 
 
@@ -10,6 +11,8 @@ import { redirect } from "next/navigation";
 async function  page() {
     const session = await auth();
     console.log(session);
+const token = await getToken({ req, raw: true }); // get raw JWT string
+    console.log('raw token:', token);
     let data = [];
     if(!session){
       redirect("/login");
